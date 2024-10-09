@@ -2,7 +2,7 @@ FSTAR_ROOT ?= ../..
 NODEPEND=1
 include $(FSTAR_ROOT)/mk/test.mk
 
-all: inline_let all_cmi Eta_expand.test Div.test ExtractAs.test
+all: inline_let all_cmi Eta_expand.test Div.test ExtractAs.test Bug3366.test
 
 %.exe: %.fst
 	$(FSTAR) --codegen OCaml $<
