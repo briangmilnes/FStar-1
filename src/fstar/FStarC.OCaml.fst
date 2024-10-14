@@ -50,9 +50,9 @@ This is usually benign as we check for exhaustivenss via SMT. *)
 
 let exec_ocamlc args =
   exec_in_ocamlenv "ocamlfind"
-    ("opt" :: "-w" :: "-8" :: "-linkpkg" :: "-package" :: "fstar.lib" :: args)
+    ("opt" :: "-w" :: "-8" :: "-linkpkg" :: "-package" :: "fstar_lib" :: args)
 
 let exec_ocamlc_plugin args =
   exec_in_ocamlenv "ocamlfind"
-    ("opt" :: "-w" :: "-8" :: "-shared" :: "-package" :: "fstar.lib" ::
+    ("opt" :: "-w" :: "-8" :: "-shared" :: "-package" :: "fstar_plugin_lib" ::
     args)
